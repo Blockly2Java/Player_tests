@@ -1,5 +1,7 @@
 package b2j.test;
 
+import static org.junit.jupiter.api.Assertions.fail;
+
 import b2j.wrappers.MainWrapper;
 
 public class Tests {
