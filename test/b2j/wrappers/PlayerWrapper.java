@@ -121,18 +121,6 @@ public class PlayerWrapper<T> extends ClassWrapper<T>
         return y;
     }
 
-    public AttributeWrapper<T, ?> speedX() {
-        return speedX;
-    }
-
-    public AttributeWrapper<T, ?> speedY() {
-        return speedY;
-    }
-
-    public ConstructorWrapper<T> constructor() {
-        return constructor;
-    }
-
     public MethodWrapper<T, ?> act() {
         return act;
     }
@@ -145,6 +133,19 @@ public class PlayerWrapper<T> extends ClassWrapper<T>
         return getY;
     }
 
+    /*
+    public AttributeWrapper<T, ?> speedX() {
+        return speedX;
+    }
+
+    public AttributeWrapper<T, ?> speedY() {
+        return speedY;
+    }
+
+    public ConstructorWrapper<T> constructor() {
+        return constructor;
+    }
+
     public MethodWrapper<T, ?> getSpeedX() {
         return getSpeedX;
     }
@@ -152,4 +153,5 @@ public class PlayerWrapper<T> extends ClassWrapper<T>
     public MethodWrapper<T, ?> getSpeedY() {
         return getSpeedY;
     }
+    */
 }
