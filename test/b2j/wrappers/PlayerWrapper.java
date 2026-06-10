@@ -14,18 +14,20 @@ public class PlayerWrapper<T> extends ClassWrapper<T>
 {
     private AttributeWrapper<T, ?> x;
     private AttributeWrapper<T, ?> y;
-    private AttributeWrapper<T, ?> speedX;
-    private AttributeWrapper<T, ?> speedY;
-
-    private ConstructorWrapper<T> constructor;
 
     private MethodWrapper<T, ?> act;
     private MethodWrapper<T, ?> getX;
     private MethodWrapper<T, ?> getY;
+
+    /*
+    private AttributeWrapper<T, ?> speedX;
+    private AttributeWrapper<T, ?> speedY;
+    private ConstructorWrapper<T> constructor;
     private MethodWrapper<T, ?> getSpeedX;
     private MethodWrapper<T, ?> getSpeedY;
-
-
+     */
+    
+    
     public PlayerWrapper()
     {
         super(
@@ -33,39 +35,22 @@ public class PlayerWrapper<T> extends ClassWrapper<T>
                 "",
             "public"
         );
-
+    
         x = new AttributeWrapper<>(
                 this,
                 "x",
                 double.class,
                 "private"
         );
-
+    
         y = new AttributeWrapper<>(
                 this,
                 "y",
                 double.class,
                 "private"
         );
-        speedX = new AttributeWrapper<>(
-                this,
-                "speedX",
-                double.class,
-                "private"
-        );
-        speedY = new AttributeWrapper<>(
-                this,
-                "speedY",
-                double.class,
-                "private"
-        );
-
-        constructor = new ConstructorWrapper<>(
-                this,
-                new Class<?>[]{ double.class, double.class },
-                "public"
-        );
-
+    
+    
         act = new MethodWrapper<>(
                 this,
                 "act",
@@ -84,6 +69,25 @@ public class PlayerWrapper<T> extends ClassWrapper<T>
                 double.class,
                 "public"
         );
+    
+        /*
+        speedX = new AttributeWrapper<>(
+                this,
+                "speedX",
+                double.class,
+                "private"
+        );
+        speedY = new AttributeWrapper<>(
+                this,
+                "speedY",
+                double.class,
+                "private"
+        );
+        constructor = new ConstructorWrapper<>(
+                this,
+                new Class<?>[]{ double.class, double.class },
+                "public"
+        );
         getSpeedX = new MethodWrapper<>(
                 this,
                 "getSpeedX",
@@ -96,7 +100,7 @@ public class PlayerWrapper<T> extends ClassWrapper<T>
                 double.class,
                 "public"
         );
-        
+         */
     }
 
     @Override
